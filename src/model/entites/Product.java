@@ -27,6 +27,11 @@ public class Product implements Comparable<Product>{
     }
     
     @Override
+    public String toString(){
+        return name + ", " + String.format("R$ %.2f", price);
+    }
+    
+    @Override
     public int compareTo(Product other) {
         return price.compareTo(other.price);
     }
